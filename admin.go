@@ -1,4 +1,4 @@
-package raftadminwq
+package raftadmin
 
 import (
 	"context"
@@ -11,22 +11,22 @@ import (
 
 	"github.com/hashicorp/raft"
 	"google.golang.org/grpc"
-	//pb "github.com/Jille/raftadminwq/proto"
-	//pb "RingAllReduce_29server/raftadminwq/proto"
-	pb "github.com/HopkinsWang/raft/raftadmin/proto"
+	//pb "github.com/Jille/raftadmin/proto"
+	//pb "RingAllReduce_29server/raftadmin/proto"
+	pb "github.com/HopkinsWang/raftadmin/proto"
 )
 
 type admin struct {
-	pb.RaftAdminWqServer
+	pb.RaftAdminServer
 	r *raft.Raft
 }
 
-func Get(r *raft.Raft) pb.RaftAdminWqServer {
-	return &admin{r:r}
+func Get(r *raft.Raft) pb.RaftAdminServer {
+	return &admin{r: r}
 }
 
 func Register(s *grpc.Server, r *raft.Raft) {
-	pb.RegisterRaftAdminWqServer(s, Get(r))
+	pb.RegisterRaftAdminServer(s, Get(r))
 }
 
 func timeout(ctx context.Context) time.Duration {
@@ -187,9 +187,9 @@ func (a *admin) LastContact(ctx context.Context, req *pb.LastContactRequest) (*p
 			}
 			t := a.r.LastContact()
 			return &pb.LastContactResponse{
-				UnixNano: t.UnixNano(),
-				Index: lastlog.Index,
-				Data: lastlog.Data,
+				UnixNano:  t.UnixNano(),
+				Index:     lastlog.Index,
+				Data:      lastlog.Data,
 				Extension: lastlog.Extensions,
 			}, nil
 		}

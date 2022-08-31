@@ -21,11 +21,11 @@ For example, I use this to add servers (voters) after initial bootstrap.
 ## Invocations
 
 ```shell
-$ raftadminwq
-Usage: raftadminwq <host:port> <command> <args...>
+$ raftadmin
+Usage: raftadmin <host:port> <command> <args...>
 Commands: add_nonvoter, add_voter, applied_index, apply_log, await, barrier, demote_voter, forget, get_configuration, last_contact, last_index, leader, leadership_transfer, leadership_transfer_to_server, remove_server, shutdown, snapshot, state, stats, verify_leader
 
-$ raftadminwq 127.0.0.1:50051 add_voter serverb 127.0.0.1:50052 0
+$ raftadmin 127.0.0.1:50051 add_voter serverb 127.0.0.1:50052 0
 Invoking AddVoter(id: "serverb" address: "127.0.0.1:50052")
 Response: operation_token:  "4a86d2efa417af281ac540bfede8fcb735e0b224"
 Invoking Await(operation_token: "4a86d2efa417af281ac540bfede8fcb735e0b224")
@@ -54,7 +54,7 @@ Last, call Forget to make the server forget the operation token and free up the 
 Some RPCs always need to go to the leader. Add https://github.com/Jille/raft-grpc-leader-rpc to your servers and use `--leader`:
 
 ```shell
-$ raftadminwq --leader multi:///127.0.0.1:50051,127.0.0.1:50052,127.0.0.1:50053 barrier
+$ raftadmin --leader multi:///127.0.0.1:50051,127.0.0.1:50052,127.0.0.1:50053 barrier
 Invoking AddVoter(id: "serverb" address: "127.0.0.1:50052")
 Response: operation_token:  "c9c7d6a5243b706ebd699791b273f58d2b471bb9"
 Invoking Await(operation_token: "c9c7d6a5243b706ebd699791b273f58d2b471bb9")

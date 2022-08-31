@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4389391-e2fa-42ca-a3f9-72658ad214e5" name="Changes" comment="" />
+    <list default="true" id="d4389391-e2fa-42ca-a3f9-72658ad214e5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/raftadminwq.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/raftadmin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.go" beforeDir="false" afterPath="$PROJECT_DIR$/admin.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.bat" beforeDir="false" afterPath="$PROJECT_DIR$/build.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/raftadminwq/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/raftadmin/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/raftadminwq/raftadminwq.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/raftadmin/raftadmin.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/proto/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/raftadminwq.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/raftadminwq.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/raftadmin.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raftadmin" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,7 +26,7 @@
   </component>
   <component name="GOROOT" url="file://C:/Program Files/Go" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
@@ -30,6 +44,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.format.on.save.advertiser.fired" value="true" />
     <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
@@ -44,11 +59,26 @@
       <option name="presentableId" value="Default" />
       <updated>1661913658203</updated>
       <workItem from="1661913660731" duration="41000" />
+      <workItem from="1661933226372" duration="164000" />
+      <workItem from="1661933417840" duration="66000" />
+      <workItem from="1661933703723" duration="733000" />
+      <workItem from="1661934962283" duration="130000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
