@@ -143,6 +143,8 @@ func do() error {
 
 	// Connect and send the RPC.
 	log.Printf("  run grpc") //wq
+	log.Printf("req = %v", req) //wq
+	log.Printf("req = %v", req)
 	var o grpc.DialOption = grpc.EmptyDialOption{}
 	if *leader {
 		o = grpc.WithDefaultServiceConfig(fmt.Sprintf(`{"healthCheckConfig": {"serviceName": "%s"}, "loadBalancingConfig": [ { "round_robin": {} } ]}`, *healthCheckService))
